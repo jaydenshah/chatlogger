@@ -2,9 +2,9 @@ const { Client, Events, GatewayIntentBits } = require("discord.js")
 const token = process.env.TOKEN
 const express = require("express")
 const app = express()
-const channelid = "1124281822663155763"
-const roleid = "1125104903820431372"
-const guildid = "827828968236908544"
+const channelid = process.env.CHANNEL_ID
+const roleid = process.env.ROLE_ID
+const guildid = process.env.GUILD_ID
 app.use(express.json())
 
 app.listen(8080, () => {
