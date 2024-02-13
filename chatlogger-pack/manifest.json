@@ -1,0 +1,37 @@
+{
+	"format_version": 2,
+	"header": {
+		"name": "chatlogger",
+		"description": "logs your chat",
+		"uuid": "fc1aca3d-7414-479b-ae94-63d34e3ac347",
+		"min_engine_version": [ 1, 20, 0 ],
+		"version": [ 1, 0, 0 ]
+	},
+	"modules": [
+		{
+			"description": "Behavior Pack Module",
+			"type": "data",
+			"uuid": "d92771b4-bd3c-4cb0-a005-116549f20e9a",
+			"version": [ 1, 0, 0 ]
+		},
+		{
+			"description": "Gametest Module",
+			"type": "script",
+			"language": "javascript",
+			"entry": "scripts/index.js",
+			"uuid": "f171d3b5-8014-4ee3-b40b-43aff48c44b1",
+			"version": [ 1, 0, 0 ]
+		}
+	],
+	"capabilities": [ "script_eval" ],
+	"dependencies": [
+		{
+			"module_name": "@minecraft/server",
+			"version": "1.4.0-beta"
+		},
+		{
+			"module_name": "@minecraft/server-net",
+			"version": "1.0.0-beta"
+		}
+	]
+}
