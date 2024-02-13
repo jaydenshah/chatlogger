@@ -1,6 +1,8 @@
-import { http, HttpRequest, HttpRequestMethod, HttpHeader, HttpClient, HttpResponse } from '@minecraft/server-net'
-export function sendMsg(msg) {
-    const request = new HttpRequest("https://chatlogger-bot.nw.r.appspot.com/send-msg")
+import { http, HttpRequest, HttpRequestMethod, HttpHeader, HttpClient, HttpResponse } from '@minecraft/server-net'
+
+export function sendMsg(msg) {
+
+    const request = new HttpRequest(process.env.SERVER_IP)
     request.method = HttpRequestMethod.POST
     request.headers = [
         new HttpHeader('content-type', 'application/json')
@@ -11,7 +13,8 @@ export function sendMsg(msg) {
     request.body = JSON.stringify(payload)
     http.request(request2).then((response) => {
         console.log(response.body)
-    })
+    })
+
 }
 
 export function getTimeString() {
