@@ -1,5 +1,5 @@
 const { Client, Events, GatewayIntentBits } = require("discord.js")
-const token = "Bot MTEyMzAwNTQxMzQyMDQzMzQ0OA.GFaLaz._6ss_bZAERLi5Q8629yr10g5yYHTNmOlivfmV0"
+const token = process.env.TOKEN
 const express = require("express")
 const app = express()
 const channelid = "1124281822663155763"
